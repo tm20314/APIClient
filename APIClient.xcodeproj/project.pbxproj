@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF3BC6C62DFAA8BD00F80517 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DF3BC6C52DFAA8BD00F80517 /* RxCocoa */; };
+		DF3BC6C82DFAA8BD00F80517 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DF3BC6C72DFAA8BD00F80517 /* RxRelay */; };
+		DF3BC6CA2DFAA8BD00F80517 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF3BC6C92DFAA8BD00F80517 /* RxSwift */; };
+		DF3BC6CD2DFAA8CE00F80517 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = DF3BC6CC2DFAA8CE00F80517 /* APIKit */; };
+		DF3BC6D02DFAA8E500F80517 /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = DF3BC6CF2DFAA8E500F80517 /* Action */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DF3BC6952DFAA5D300F80517 /* APIClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3BC6D02DFAA8E500F80517 /* Action in Frameworks */,
+				DF3BC6CD2DFAA8CE00F80517 /* APIKit in Frameworks */,
+				DF3BC6CA2DFAA8BD00F80517 /* RxSwift in Frameworks */,
+				DF3BC6C82DFAA8BD00F80517 /* RxRelay in Frameworks */,
+				DF3BC6C62DFAA8BD00F80517 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,11 @@
 			);
 			name = APIClient;
 			packageProductDependencies = (
+				DF3BC6C52DFAA8BD00F80517 /* RxCocoa */,
+				DF3BC6C72DFAA8BD00F80517 /* RxRelay */,
+				DF3BC6C92DFAA8BD00F80517 /* RxSwift */,
+				DF3BC6CC2DFAA8CE00F80517 /* APIKit */,
+				DF3BC6CF2DFAA8E500F80517 /* Action */,
 			);
 			productName = APIClient;
 			productReference = DF3BC6952DFAA5D300F80517 /* APIClient.app */;
@@ -107,6 +125,11 @@
 			);
 			mainGroup = DF3BC68C2DFAA5D300F80517;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DF3BC6C42DFAA8BD00F80517 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DF3BC6CB2DFAA8CE00F80517 /* XCRemoteSwiftPackageReference "APIKit" */,
+				DF3BC6CE2DFAA8E500F80517 /* XCRemoteSwiftPackageReference "Action" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DF3BC6962DFAA5D300F80517 /* Products */;
 			projectDirPath = "";
@@ -150,7 +173,6 @@
 				INFOPLIST_FILE = APIClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -178,7 +200,6 @@
 				INFOPLIST_FILE = APIClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,6 +356,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF3BC6C42DFAA8BD00F80517 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		DF3BC6CB2DFAA8CE00F80517 /* XCRemoteSwiftPackageReference "APIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ishkawa/APIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		DF3BC6CE2DFAA8E500F80517 /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF3BC6C52DFAA8BD00F80517 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3BC6C42DFAA8BD00F80517 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DF3BC6C72DFAA8BD00F80517 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3BC6C42DFAA8BD00F80517 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DF3BC6C92DFAA8BD00F80517 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3BC6C42DFAA8BD00F80517 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DF3BC6CC2DFAA8CE00F80517 /* APIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3BC6CB2DFAA8CE00F80517 /* XCRemoteSwiftPackageReference "APIKit" */;
+			productName = APIKit;
+		};
+		DF3BC6CF2DFAA8E500F80517 /* Action */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF3BC6CE2DFAA8E500F80517 /* XCRemoteSwiftPackageReference "Action" */;
+			productName = Action;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF3BC68D2DFAA5D300F80517 /* Project object */;
 }
