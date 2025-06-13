@@ -10,9 +10,12 @@ import Foundation
 import RxSwift
 
 final class APIClient: APIClientProtocol {
+    //ここはAPIへリクエストするファイル
     func response<Request: HolidayAPIRequestType>(_ request: Request) -> Single<
         Request.Response> {
         return .create { observer in
+            //
+            //ここからAPIへリクエストを開始
             let task = Session.shared.send(request) { result in
                 switch result {
                 case let .success(response):

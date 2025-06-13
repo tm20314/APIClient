@@ -23,6 +23,7 @@ extension HolidayAPIRequestType {
 // MARK: - Response
 // ④ここでJsonからSwiftへデコードする
 extension HolidayAPIRequestType where Response: Decodable {
+    //リクエストを受け取って
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
         guard let data = object as? Data else { throw ResponseError.unexpectedObject(object) }
         do {

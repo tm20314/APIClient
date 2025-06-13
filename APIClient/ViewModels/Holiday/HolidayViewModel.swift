@@ -43,7 +43,7 @@ final class HolidayViewModel: HolidayViewModelType {
            self.searchHolidayAction = .init { date in
                searchHolidayRepository.fetchSearchResult(date: date)
            }
-           
+           //ここでAPIから結果を受け取る
            let result = searchHolidayAction.elements.share(replay: 1)
            //成功した時
            self.holidayText = result
@@ -51,6 +51,7 @@ final class HolidayViewModel: HolidayViewModelType {
                .asDriver(onErrorDriveWith: .empty())
            //検索ボタンをタップした時
            tapSearchButton.withLatestFrom(selectDate)
+           //選択した日付を渡すsearchHolidayActionに渡す
                .bind(to: searchHolidayAction.inputs)
                .disposed(by: disposeBag)
        }}

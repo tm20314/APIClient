@@ -45,15 +45,17 @@ final class HolidayViewController: UIViewController {
 // MARK: - Binding
 private extension HolidayViewController {
     func bind(to viewModel: Dependency) {
-        // ピッカーでの日付選択
+        // ピッカーでの日付選択をする
+        //1.ViewModelに日付を渡す
         datePicker.rx.date
             .bind(to: viewModel.inputs.selectDate)
             .disposed(by: disposeBag)
-        // 検索ボタンタップ
+        // 検索ボタンをタップする
+        // 1.ViewModelに検索ボタンを押したことを伝える
         searchButton.rx.tap.asSignal()
             .emit(to: viewModel.inputs.tapSearchButton)
             .disposed(by: disposeBag)
-        // ラベルに日付表示
+        // ラベルに祝日を表示
         viewModel.outputs.holidayText
             .drive(holidayLabel.rx.text)
             .disposed(by: disposeBag)
